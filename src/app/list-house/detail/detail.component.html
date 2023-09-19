@@ -1,0 +1,36 @@
+<header></header>
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-12">
+      <h3 class="mb-3">House Detail</h3>
+
+      <ng-container *ngIf="houseDetail">
+        <div>
+          <ul>
+            <li>
+              <div class="title">Name :</div>
+              <div>
+                {{ houseDetail.name }}
+              </div>
+            </li>
+            <li>
+              <div class="title">Address :</div>
+              <div>
+                {{ houseDetail.address }}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="!isLoading && !houseDetail">
+        <div class="alert alert-danger my-5">Data not found</div>
+      </ng-container>
+
+      <div class="mt-4">
+        <a routerLink="/house" class="btn btn-outline-danger">Go Back</a>
+      </div>
+    </div>
+  </div>
+</div>

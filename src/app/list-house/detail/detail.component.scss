@@ -1,0 +1,19 @@
+h3 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+        display: flex;
+        margin-bottom: 10px;
+
+        .title {
+            width: 120px;
+            min-width: 120px
+        }
+    }
+}
