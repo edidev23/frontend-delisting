@@ -12,15 +12,15 @@ export class ListHouseService {
 
   getHouses() {
     return this.http
-      .get(environment.apiUrl + `house`, {
+      .get(environment.apiUrl + `get_list.php`, {
         // headers: this.reqHeader,
       })
       .pipe(catchError(this.handleError));
   }
 
-  getDetailHouse(id: string) {
+  getDetailHouse(slug: string) {
     return this.http
-      .get(environment.apiUrl + `house/${id}`, {
+      .get(environment.apiUrl + `get_list.php?slug=${slug}`, {
         // headers: this.reqHeader,
       })
       .pipe(catchError(this.handleError));
