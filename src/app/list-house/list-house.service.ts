@@ -20,7 +20,7 @@ export class ListHouseService {
 
   getDetailHouse(slug: string) {
     return this.http
-      .get(environment.apiUrl + `get_list.php?slug=${slug}`, {
+      .get(environment.apiUrl + `get_detail.php?slug=${slug}`, {
         // headers: this.reqHeader,
       })
       .pipe(catchError(this.handleError));
